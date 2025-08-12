@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Primary*/
+  --Soft-Cyan: hsl(174, 77%, 80%);
+  --Soft-Cyan-alpha: hsla(174, 76%, 80%, 0.5);
+  --Strong-Cyan: hsl(174, 86%, 45%);
+  --Light-Grayish-Red: hsl(14, 92%, 95%);
+  --Light-Red: hsl(15, 100%, 70%);
+  --Pale-Blue: hsl(226, 100%, 87%);
+
+  /*Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Very-Pale-Blue: hsl(230, 100%, 99%);
+  --Light-Grayish-Blue: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue: hsl(223, 50%, 87%);
+  --Grayish-Blue: hsl(225, 20%, 60%);
+  --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Very-Pale-Blue);
+}
+
+.backgroundTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 63dvh;
+  background-color: var(--Soft-Cyan-alpha);
+  border-bottom-left-radius: 10rem;
+}
+
+.container {
+  position: relative;
+  z-index: 50;
+  display: grid;
+  gap: 3.5rem;
+  width: 90%;
+  max-width: 470px;
+}
+
+.coText {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.coText__title {
+  position: relative;
+  z-index: 20;
+  color: var(--Dark-Desaturated-Blue);
+  padding-bottom: 8px;
+}
+.coText__text {
+  position: relative;
+  z-index: 20;
+  font-size: 0.9rem;
+  color: var(--Grayish-Blue);
+}
+
+.coText__pattern-circles {
+  position: absolute;
+  top: -50px;
+  z-index: 10;
+}
+
+.card {
+  padding: 1.2rem;
+  background-color: var(--White);
+  border-radius: 7px;
+  box-shadow: 0 0 7px -2px rgba(0 0 0 /0.5);
+}
