@@ -19,7 +19,7 @@
   --White: hsl(0, 0%, 100%);
   --Very-Pale-Blue: hsl(230, 100%, 99%);
   --Light-Grayish-Blue: hsl(224, 65%, 95%);
-  --Light-Grayish-Blue: hsl(223, 50%, 87%);
+  --Light-Grayish-Blue-toggle: hsl(223, 50%, 87%);
   --Grayish-Blue: hsl(225, 20%, 60%);
   --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
 }
@@ -79,8 +79,87 @@ body {
 }
 
 .card {
-  padding: 1.2rem;
+  padding: 1.8rem;
   background-color: var(--White);
   border-radius: 7px;
   box-shadow: 0 0 7px -2px rgba(0 0 0 /0.5);
+}
+
+.card__body {
+  display: grid;
+  gap: 2rem;
+}
+
+.card__coText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: 1rem;
+  color: var(--Grayish-Blue);
+  text-transform: uppercase;
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--Dark-Desaturated-Blue);
+}
+
+.card__priceXmonth {
+  padding-right: 8px;
+}
+
+.card__priceMonth {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Grayish-Blue);
+}
+.card__inputRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background: var(--Light-Grayish-Blue);
+  background-image: linear-gradient(var(--Soft-Cyan), var(--Soft-Cyan));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.card__inputRange:hover {
+  opacity: 1;
+}
+
+.card__inputRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--Strong-Cyan);
+  cursor: pointer;
+  box-shadow: 0px 3px 20px 6px var(--Soft-Cyan);
+  background: url("./images/icon-slider.svg") #75b4c3;
+  background-size: 45%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__inputRange::-moz-range-thumb {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--Strong-Cyan);
+  cursor: pointer;
+  box-shadow: 0px 3px 20px 6px rgba(0, 0, 0, 0.26);
+  background: url("./images/icon-slider.svg") #75b4c3;
+  background-size: 45%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
