@@ -104,7 +104,7 @@ body {
 .card__price {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--Dark-Desaturated-Blue);
 }
 
@@ -162,4 +162,80 @@ body {
   background-size: 45%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.card__coDiscount {
+  display: flex;
+  justify-content: end;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+  padding-bottom: 2rem;
+}
+
+.card__slidingButton {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 21px;
+  padding: 0 3px;
+  border-radius: 50px;
+  background-color: var(--Light-Grayish-Blue-toggle);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card__buttonTumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--White);
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card__slidingActive {
+  background-color: var(--Strong-Cyan);
+}
+.card__slidingActive .card__buttonTumb {
+  margin-left: auto;
+}
+
+.card__discount {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--Light-Red);
+  padding: 4px 7px;
+  margin-left: 8px;
+  background-color: var(--Light-Grayish-Red);
+  border-radius: 20px;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--Light-Grayish-Blue);
+}
+
+.card__list {
+  display: grid;
+  gap: 11px;
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+  padding-left: 1rem;
+  list-style-image: url("./images/icon-check.svg");
+}
+.card__btnStart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 137px;
+  height: 32px;
+  font-size: 0.8rem;
+  color: var(--White);
+  text-decoration: none;
+  background-color: var(--Dark-Desaturated-Blue);
+  border-radius: 40px;
 }
